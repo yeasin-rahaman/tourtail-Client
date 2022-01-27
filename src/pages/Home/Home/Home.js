@@ -12,7 +12,6 @@ const Home = () => {
 
             <HeroSection></HeroSection>
             <HomeServices></HomeServices>
-
             <About></About>
             <ExpertTeam></ExpertTeam>
             <GetInTouch></GetInTouch>

@@ -1,38 +1,51 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
+import { Carousel } from 'react-bootstrap';
+import banner1 from './../../assets/images/Banner/1.png';
+import banner2 from './../../assets/images/Banner/2.png';
+import banner3 from './../../assets/images/Banner/3.png';
 const HeroSection = () => {
     return (
-        <section className="hero-section">
-            <div className="container">
-                <div className="row pt-5 pb-5">
-                    <div className="d-flex justify-content-center align-items-center ">
-                        <div>
-                            <div id="home" style={{ height: '700px' }} className="row align-items-center d-flex  justify-content-start px-5 my-5 py-5">
-                                <div className=" text-center my-5 py-5 ">
-                                    <h1 className="text-light  display-1">
-                                        <Typewriter
-                                            options={{
-                                                strings: ["Best Car Provider"],
-                                                autoStart: true,
-                                                loop: true,
-                                            }}
-                                        />
-                                    </h1>
-                                </div>
+        <div className="banner pb-5">
+            <>
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={banner1}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Gustave Flaubert</h3>
+                            <p>“Travel makes one modest. You see what a tiny place you occupy in the world.”</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={banner2}
+                            alt="Second slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Ray Bradbury</h3>
+                            <p>“See the world. It's more fantastic than any dream made or paid for in factories. Ask for no guarantees, ask for no security.”</p>
+                        </Carousel.Caption>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="d-flex justify-content-center">
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={banner3}
+                            alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Terry Pratchett</h3>
+                            <p>“Twoflower was a tourist, the first ever seen on the discworld. Tourist, Rincewind had decided, meant 'idiot'.”</p>
+                        </Carousel.Caption>
 
-
-                <NavLink to="/blogs" className="btn btn-danger btn-lg p-4 text-light  col-md-2 rounded-pill btn-block" >More Cars <i className="fas fa-angle-double-right"></i> </NavLink>
-
-            </div>
-        </section>
+                    </Carousel.Item>
+                </Carousel>
+            </>
+        </div>
     );
 };
 

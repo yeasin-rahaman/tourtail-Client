@@ -35,7 +35,7 @@ const RemoveServices = () => {
         <div>
             <div className="row">
             </div>
-            <div className="d-flex mt-5 justify-content-center "><h1>Services</h1></div>
+            <div className="d-flex mt-5 justify-content-center "><h1>All Blogs</h1></div>
             <div className="container text-black mt-5 mb-5" >
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {services.map(service => <div className="col" key={service.key} >

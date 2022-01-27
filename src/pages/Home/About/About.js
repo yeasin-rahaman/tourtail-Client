@@ -17,7 +17,7 @@ const About = () => {
                     <div className="card h-100 align-items-center hover">
                         <img src={expert} className="card-img-top w-50" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Expert Engineers</h5>
+                            <h5 className="card-title">Expert Gide</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const About = () => {
                     <div className="card h-100 align-items-center hover">
                         <img src={onTime} className="card-img-top w-50" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">On time Delivery</h5>
+                            <h5 className="card-title">Quick Response</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const About = () => {
                     <div className="card h-100 align-items-center hover">
                         <img src={experience} className="card-img-top w-50" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Best Technology</h5>
+                            <h5 className="card-title">Best Service</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>

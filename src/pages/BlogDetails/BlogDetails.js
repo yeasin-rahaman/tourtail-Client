@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import UseAuth from '../../hooks/UseAuth';
 import { Carousel } from 'react-bootstrap';
 import Rating from 'react-rating';
+import './BlogDetails.css'
 
 
 const BlogDetails = () => {
@@ -69,20 +70,48 @@ const BlogDetails = () => {
         <div className="container custom-body mt-5">
             <div className='row  align-items-center'>
                 <div className=" col-md-12">
-                    <div className="card custom-cart mb-3">
-                        <img src={selected.img} className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h1 className="card-title">{selected.name}</h1>
-                            <p className="card-text">{selected.desc}</p>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src={selected.img} className="card-img-top w-100 mx-auto img-fluid " alt="..." />
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">{selected.place}</h2>
+                                    <p class="card-text">{selected.desc}</p>
+                                    <p className="card-text"> <b>Transportation:</b>{selected.transportation}</p>
+                                    <p className="card-text"><b>Rating :</b>{selected.rating}</p>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className='row my-5'>
                 <div className='col-md-6 add-service d-flex justify-content-center'>
                     <div className=" bg-dark text-white pb-5 pt-1">
                         <div className="text-center pt-5 pb-3">
-                            <h1 style={{ fontSize: "60px" }}>Customer Reviews</h1>
+                            <h1 >Customer Reviews</h1>
                         </div>
                         <hr />
                         <Carousel>
@@ -90,17 +119,22 @@ const BlogDetails = () => {
                                 reviews?.map(
                                     review =>
                                         <Carousel.Item key={review._id}>
-                                            <div className="d-flex justify-content-center text-center review-slider">
+                                            <div className="d-flex justify-content-center text-center review-slider test">
                                                 <div className="w-50">
                                                     <h3 className="color-white">{review?.name}</h3>
                                                     <br />
-                                                    <p>  {review?.review}</p>
+
 
                                                     <Rating className="star"
                                                         initialRating={Number(review.rating)}
                                                         emptySymbol="far fa-star icon-color"
                                                         fullSymbol="fas fa-star icon-color"
-                                                        readonly></Rating>
+                                                        readonly>
+
+                                                    </Rating>
+                                                    <br />
+
+                                                    <p>  {review?.review}</p>
                                                 </div>
                                             </div>
                                         </Carousel.Item>
@@ -111,7 +145,10 @@ const BlogDetails = () => {
 
                     </div>
                 </div>
+
                 <div className='col-md-6 add-service d-flex justify-content-center'>
+
+                    <br />
                     <form onSubmit={handleSubmit(onSubmit)}
                         className="contact1-form validate-form">
 
@@ -136,10 +173,11 @@ const BlogDetails = () => {
                         </div>
                     </form>
                 </div>
+            </div>
 
 
-            </div >
-        </div>
+        </div >
+
     );
 };
 

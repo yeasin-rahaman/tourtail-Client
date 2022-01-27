@@ -1,0 +1,14 @@
+button.active {
+    display: none;
+}
+.bg-dark.text-white.pb-5.pt-1 {
+    width: 100%;
+}
+
+.test button {
+    display: none;
+}
+
+span.fas.fa-star.icon-color {
+    color: goldenrod;
+}

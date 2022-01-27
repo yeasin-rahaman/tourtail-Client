@@ -36,7 +36,7 @@ const AddToDatabase = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
 
                         <span className="contact1-form-title">
-                            Admin Database
+                            Add New Blog
                         </span>
 
                         <div className="wrap-input1 validate-input" data-validate="place is required">
@@ -45,7 +45,6 @@ const AddToDatabase = () => {
                         </div>
 
                         <div className="wrap-input1 validate-input" data-validate="url">
-                            <input type="text" />
                             <input className="input1" placeholder="Image URL"  {...register("img",)} />
                             <span className="shadow-input1"></span>
                         </div>
@@ -67,21 +66,32 @@ const AddToDatabase = () => {
                             <textarea className="input1" placeholder="Description"{...register("desc",)} />
                             <span className="shadow-input1"></span>
                         </div>
+                        <h3>Category: </h3>
+                        <br />
+                        <div className='d-flex align-items-center' >
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">Air</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="air" />
 
-                        <label htmlFor="">air</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="air" />
-                        <hr />
-                        <label htmlFor="">XCruise</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="cruise" />
-
-                        <hr />
-                        <label htmlFor="">road</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="road" />
-
-
+                            </div>
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">Cruise</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="cruise" />
+                            </div>
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">road</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="road" />
+                            </div>
 
 
-                        <div className="container-contact1-form-btn">
+
+                        </div>
+
+
+
+
+
+                        <div className="container-contact1-form-btn mt-4">
                             <button type='submit' className="contact1-form-btn">
                                 <span>
                                     Send Data

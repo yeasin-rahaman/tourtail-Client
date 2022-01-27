@@ -10,7 +10,7 @@ const HomeServices = () => {
     return (
         <div className="py-5">
             <div className="text-center pt-5 pb-3">
-                <h1 style={{ fontSize: "60px" }}>Our Cars </h1>
+                <h1 style={{ fontSize: "60px" }}>Our Top Rated Blogs </h1>
             </div>
             <div className="container text-black mt-5 mb-5" >
                 <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -26,12 +26,16 @@ const HomeServices = () => {
                                 <div className="card custom-cart h-100 hover">
                                     <img src={service.img} className="img-fluid rounded-start w-100" alt="..." />
                                     <div className="card-body">
-                                        <h5 className="card-title">{service.name}</h5>
+                                        <h2 className="card-title text-center">{service.place}</h2>
+                                        <h5>Location : {service.location}</h5>
+
+                                        <h5>Transportation : {service.transportation}</h5>
+                                        <br />
                                         <p className="card-text">{service.desc}</p>
                                     </div>
                                     <div className="card-footer  text-center">
-                                        <h5 className="text-warning p-2 bg-danger my-2">Price $: {service.price}</h5>
-                                        <NavLink to={`/blogs/${service._id}`} className="btn btn-danger btn-lg px-5 text-light   rounded-pill btn-block">BUY</NavLink>
+                                        <h5 className="p-2 my-2">Price $: {service.price}</h5>
+                                        <NavLink to={`/blogs/${service._id}`} className="btn btn-danger btn-lg px-5 text-light   rounded-pill btn-block">Details</NavLink>
                                     </div>
                                 </div>
                             </div>)

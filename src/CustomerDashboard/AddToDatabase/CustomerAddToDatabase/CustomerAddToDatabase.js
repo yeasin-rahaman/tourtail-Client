@@ -40,8 +40,7 @@ const CustomerAddToDatabase = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
 
                         <span className="contact1-form-title">
-                            Customer Data
-                        </span>
+                            Add A New Blog                        </span>
 
                         <div className="wrap-input1 validate-input" data-validate="place is required">
                             <input className="input1" placeholder="Name" {...register("place", { required: true, })} />
@@ -49,7 +48,6 @@ const CustomerAddToDatabase = () => {
                         </div>
 
                         <div className="wrap-input1 validate-input" data-validate="url">
-                            <input type="text" />
                             <input className="input1" placeholder="Image URL"  {...register("img",)} />
                             <span className="shadow-input1"></span>
                         </div>
@@ -71,25 +69,30 @@ const CustomerAddToDatabase = () => {
                             <textarea className="input1" placeholder="Description"{...register("desc",)} />
                             <span className="shadow-input1"></span>
                         </div>
+                        <h4> Category: </h4>
 
-                        <label htmlFor="">air</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="air" />
-                        <hr />
-                        <label htmlFor="">XCruise</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="cruise" />
+                        <br />
+                        <div className='d-flex align-items-center' >
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">Air</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="air" />
 
-                        <hr />
-                        <label htmlFor="">road</label>
-                        <input {...register("transportation", { required: true })} type="radio" value="road" />
+                            </div>
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">Cruise</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="cruise" />
+                            </div>
+                            <div className='mx-2'>
+                                <label className='pe-2' htmlFor="">road</label>
+                                <input {...register("transportation", { required: true })} type="radio" value="road" />
+                            </div>
 
+                        </div>
 
-
-
-                        <div className="container-contact1-form-btn">
+                        <div className="container-contact1-form-btn mt-4">
                             <button type='submit' className="contact1-form-btn">
                                 <span>
-                                    Send Data
-                                    <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                    Add Blog                                    <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
                                 </span>
                             </button>
                         </div>

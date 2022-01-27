@@ -7,46 +7,46 @@ import OurGuide4 from './../../../assets/images/OurGuide(4).jpg'
 const ExpertTeam = () => {
     return (
         <div className='container py-5'>
-            <div className="text-center py-5">
-                <h1 style={{ fontSize: "60px" }}>Our Expert Team</h1>
+            <div className="text-center pt-5 pb-3">
+                <h1 style={{ fontSize: "60px" }}>Our Guides</h1>
             </div>
-            <div className="row row-cols-1 row-cols-md-4 g-4">
-                <div className="col">
-                    <div className="card h-100 hover">
-                        <img src={OurGuide1} className="card-img-top img-fluid" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">BEATRICE PRIOR</h5>
-                            <p className="card-text">Engin Expert</p>
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-5">
+                <div class="col">
+                    <div class="card h-100 hover">
+                        <img src={OurGuide1} class="card-img-top img-fluid" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">BEATRICE PRIOR</h5>
+                            <p class="card-text">Tour Guide</p>
                         </div>
 
                     </div>
                 </div>
-                <div className="col">
-                    <div className="card h-100 hover">
-                        <img src={OurGuide2} className="card-img-top img-fluid" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">EDWARD DUGHLAS</h5>
-                            <p className="card-text">Design Expert</p>
+                <div class="col">
+                    <div class="card h-100 hover">
+                        <img src={OurGuide2} class="card-img-top img-fluid" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">EDWARD DUGHLAS</h5>
+                            <p class="card-text">Tour Planer</p>
                         </div>
 
                     </div>
                 </div>
-                <div className="col">
-                    <div className="card h-100 hover">
-                        <img src={OurGuide3} className="card-img-top img-fluid img-fluid" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">PETER PARKER</h5>
-                            <p className="card-text">Technical Expert</p>
+                <div class="col">
+                    <div class="card h-100 hover">
+                        <img src={OurGuide3} class="card-img-top img-fluid img-fluid" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">PETER PARKER</h5>
+                            <p class="card-text">Tour Expert</p>
                         </div>
 
                     </div>
                 </div>
-                <div className="col">
-                    <div className="card h-100 hover">
-                        <img src={OurGuide4} className="card-img-top img-fluid img-fluid" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">LIZA THOMAS</h5>
-                            <p className="card-text">Business Expert</p>
+                <div class="col">
+                    <div class="card h-100 hover">
+                        <img src={OurGuide4} class="card-img-top img-fluid img-fluid" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">LIZA THOMAS</h5>
+                            <p class="card-text">Tour Guide</p>
                         </div>
 
                     </div>

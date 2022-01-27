@@ -41,7 +41,7 @@ const AllOrders = () => {
 
         < div className="container all-order-container" >
             <div className="text-center pb-3">
-                <h1 className="mb-5 text-center pt-5">Your Ordered <span className="text-danger">{orders.length}</span>  Products....!!!!!</h1>
+                <h1 className="mb-5 text-center pt-5">Total Blogs <span className="text-danger">{orders.length}</span>  </h1>
             </div>
 
             <table className="table table-dark" style={{ width: "100%" }}>
@@ -49,11 +49,11 @@ const AllOrders = () => {
                     <tr className="bg-dark text-white mb-3 p-2" style={{ border: "1px solid red" }}>
 
                         <th >Number</th>
-                        <th >Product</th>
+                        <th >Place</th>
+                        <th >Location</th>
                         <th >Image</th>
                         <th >Price</th>
-                        <th >User Email</th>
-                        <th >User Address</th>
+                        <th >Transportation</th>
                         <th >Status</th>
                         <th >Update</th>
                     </tr>
@@ -62,17 +62,18 @@ const AllOrders = () => {
                     <tbody key={order._id}>
                         <tr role="row" style={{ border: "2px solid gray" }} >
                             <th scope="row">{index + 1}</th>
-                            <td>{order.name}</td>
+                            <td>{order.place}</td>
+                            <td>{order.location}</td>
                             <td><img style={{ width: "70px", height: "50px" }} src={order.img} alt="" /></td>
                             <td>{order.price}</td>
-                            <td>{order.email}</td>
-                            <td>{order.address}</td>
+                            <td>{order.transportation}</td>
                             <td>
                                 <div >
                                     <select onChange={handleSelectValue} className="pending p-2 ">
                                         <option defaultValue={order.status}>{order.status}</option>
                                         <option defaultValue="approved">approved</option>
-                                        <option defaultValue="pending">Cancelled</option>
+                                        <option defaultValue="pending">Pending</option>
+                                        <option defaultValue="cancelled">Cancelled</option>
                                     </select>
                                 </div>
                             </td>

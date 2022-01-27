@@ -1,4 +1,4 @@
-<h1>tourtail</h1>
+<h1>Tourtail</h1>
 
   <h2> Click to see  :  <a href="https://car-hub-bd.netlify.app/">Live Site</a> </h2>
   
@@ -6,7 +6,7 @@
 <h3>This Website is made with react, bootstrap, and some css and Jason, Firebase</h3>
 
 
-<h2>This website is for tourtail selling  Services</h2>
+<h2>This website is for Tour Services</h2>
 <br>
 <h2>Functionality</h2>
 <ul> 

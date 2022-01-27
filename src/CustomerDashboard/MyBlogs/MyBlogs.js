@@ -36,15 +36,17 @@ const MyBlogs = () => {
     return (
         < div className="container my-order-container custom-body" >
             <div className="text-center pb-3">
-                <h1 className="mb-5 text-center pt-5">Your Ordered <span className="text-danger">{orders.length}</span>  Products....!!!!!</h1>
+                <h1 className="mb-5 text-center pt-5">Your Blogs <span className="text-danger">{orders.length}</span>  </h1>
             </div>
 
             <table className="table table-dark" style={{ width: "100%" }}>
                 <thead  >
                     <tr className="bg-dark text-white mb-3 p-2" style={{ border: "1px solid red" }}>
-                        <th  >Product</th>
+                        <th  >Place</th>
                         <th >Image</th>
                         <th >Price</th>
+                        <th >location</th>
+                        <th >Transportation</th>
                         <th >Status</th>
                         <th >Action</th>
                     </tr>
@@ -52,15 +54,17 @@ const MyBlogs = () => {
                 {orders?.map((order) => (
                     <tbody>
                         <tr role="row" style={{ border: "2px solid gray" }} >
-                            <td>{order.name}</td>
+                            <td>{order.place}</td>
                             <td><img style={{ width: "70px", height: "50px" }} src={order.img} alt="" /></td>
                             <td>{order.price}</td>
+                            <td>{order.location}</td>
+                            <td>{order.transportation}</td>
                             <td>{order.status}</td>
                             <td> <button
                                 className="btn btn-danger"
                                 onClick={() => handleOrderCancel(order._id)}
                             >
-                                Cancel Order
+                                Delete Blog
                             </button></td>
                         </tr>
                     </tbody>
