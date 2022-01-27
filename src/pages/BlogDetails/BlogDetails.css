@@ -12,3 +12,6 @@ button.active {
 span.fas.fa-star.icon-color {
     color: goldenrod;
 }
+.carousel-indicators {
+    display: none;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-// import './Services.css'
+import './Blogs.css'
 import spinner from './../../assets/Infinity-1s-200px.svg'
 import ReactPaginate from 'react-paginate';
 
@@ -40,7 +40,7 @@ const Blogs = () => {
             <div className="row">
                 <div className='ms-3'>
                     <h4 className='my-5'>Select Tour Type</h4>
-                    <select className='mt-5 bg-dark' onChange={handleSelectValue} className="pending p-2 ">
+                    <select className='mt-5 bg-dark' onChange={handleSelectValue} className=" pending p-2 ">
                         <option defaultValue=''>All</option>
                         <option defaultValue="air">Air</option>
                         <option defaultValue="cruise">cruise</option>
@@ -60,7 +60,7 @@ const Blogs = () => {
                             :
 
                             services?.map(service => <div className="col" key={service._id} >
-                                <div className="card custom-cart h-100 hover">
+                                <div className="card custom-cart h-100 hover ">
                                     <img src={service.img} className="img-fluid rounded-start w-100" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Place: {service.place}</h5>
