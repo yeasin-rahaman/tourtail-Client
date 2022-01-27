@@ -20,7 +20,7 @@ const BlogDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://damp-sierra-91485.herokuapp.com/blogs/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setSelected(data)
@@ -33,7 +33,7 @@ const BlogDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${id}`)
+        fetch(`https://damp-sierra-91485.herokuapp.com/review/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data)
@@ -50,7 +50,7 @@ const BlogDetails = () => {
         data.email = user.email
 
 
-        fetch(`http://localhost:5000/addReview`, {
+        fetch(`https://damp-sierra-91485.herokuapp.com/addReview`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

@@ -5,7 +5,7 @@ const RemoveServices = () => {
 
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://damp-sierra-91485.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setServices(data.blogs))
     }, [])
@@ -13,7 +13,7 @@ const RemoveServices = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure you want to DELETE this service')
         if (proceed) {
-            const url = `http://localhost:5000/blogs/${id}`
+            const url = `https://damp-sierra-91485.herokuapp.com/blogs/${id}`
             fetch(url, {
                 method: 'DELETE'
 

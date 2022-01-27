@@ -16,7 +16,7 @@ const Blogs = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}&&filter=${filter}`)
+        fetch(`https://damp-sierra-91485.herokuapp.com/blogs?page=${page}&&size=${size}&&filter=${filter}`)
             .then(res => res.json())
             .then(data => {
                 setServices(data.blogs)

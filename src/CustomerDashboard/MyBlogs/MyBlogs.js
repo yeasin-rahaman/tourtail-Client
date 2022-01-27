@@ -6,7 +6,7 @@ const MyBlogs = () => {
     const { allContexts } = UseAuth()
     const { user } = allContexts
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://damp-sierra-91485.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [user?.email]);
@@ -16,7 +16,7 @@ const MyBlogs = () => {
     const handleOrderCancel = id => {
         const proceed = window.confirm('Are you sure you want to Cancel this Order')
         if (proceed) {
-            const url = `http://localhost:5000/cancelOrder/${id}`;
+            const url = `https://damp-sierra-91485.herokuapp.com/cancelOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
 

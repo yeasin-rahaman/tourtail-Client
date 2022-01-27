@@ -13,14 +13,14 @@ const AllOrders = () => {
     const [status, setStatus] = useState('')
     const { user } = allContexts
     useEffect(() => {
-        fetch(`http://localhost:5000/allBlogs`)
+        fetch(`https://damp-sierra-91485.herokuapp.com/allBlogs`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [user?.email]);
 
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/statusUpdate/${id}`, {
+        fetch(`https://damp-sierra-91485.herokuapp.com/statusUpdate/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status }),

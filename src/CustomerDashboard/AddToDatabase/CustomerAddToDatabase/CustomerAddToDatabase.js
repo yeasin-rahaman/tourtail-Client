@@ -14,7 +14,7 @@ const CustomerAddToDatabase = () => {
         data.userName = user.displayName
         data.email = user.email
         data.status = 'pending'
-        axios.post('http://localhost:5000/blogs', data)
+        axios.post('https://damp-sierra-91485.herokuapp.com/blogs', data)
 
             .then(res => {
                 if (res.data.insertedId) {
