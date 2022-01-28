@@ -21,7 +21,7 @@
 
 .add-service a:hover {
 	text-decoration: none;
-	color: #57b846;
+	color: #dc3545;
 }
 
 /*---------------------------------------------*/
@@ -237,7 +237,7 @@
   min-width: 193px;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #dc3545;
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
