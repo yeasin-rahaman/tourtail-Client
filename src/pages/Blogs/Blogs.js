@@ -67,6 +67,7 @@ const Blogs = () => {
                                         <h6 className="card-text"> Location: {service.location}</h6>
                                         <h6 className="card-text">Transportation: {service.transportation}</h6>
                                         <h6 className="card-text">Rating : {service.rating}</h6>
+                                        <h6 className="card-text">Time: {service.time}</h6>
 
                                         <p className="card-text">{service.desc}</p>
 

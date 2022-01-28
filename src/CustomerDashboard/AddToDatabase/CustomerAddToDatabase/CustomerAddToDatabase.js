@@ -4,13 +4,39 @@ import UseAuth from '../../../hooks/UseAuth';
 import dataImg from './../../../assets/databaseupdate.gif';
 import './CustomerAddToDatabase'
 
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+
+const addZero = (num) => `${num}`.padStart(2, '0');
+
+const newTime =
+    year +
+    '-' +
+    addZero(month + 1) +
+    '-' +
+    addZero(day) +
+    ' ' +
+    addZero(hours) +
+    ':' +
+    addZero(minutes);
+
+
+
+
+
+
+
 
 const CustomerAddToDatabase = () => {
     const { allContexts } = UseAuth()
     const { user } = allContexts
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        // data.transportation = transportation
+        data.time = newTime
         data.userName = user.displayName
         data.email = user.email
         data.status = 'pending'
@@ -23,12 +49,7 @@ const CustomerAddToDatabase = () => {
                 }
             })
     };
-    // const [transportation, setTransportation] = useState([])
 
-
-    // const getTransportation = (e) => {
-    //     setTransportation(e.target.value)
-    // }
 
     return (
         <div className="add-service">
@@ -56,10 +77,7 @@ const CustomerAddToDatabase = () => {
                             <span className="shadow-input1"></span>
                         </div>
 
-                        <div className="wrap-input1 validate-input" data-validate="rating is required">
-                            <input className="input1" placeholder="Rating" type="number" {...register("rating")} />
-                            <span className="shadow-input1"></span>
-                        </div>
+
                         <div className="wrap-input1 validate-input" data-validate="Subject is required">
                             <input className="input1" placeholder="Price" type="number" {...register("price")} />
                             <span className="shadow-input1"></span>

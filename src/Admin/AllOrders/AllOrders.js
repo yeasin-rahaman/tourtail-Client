@@ -31,7 +31,8 @@ const AllOrders = () => {
     }
 
     const handleSelectValue = (e) => {
-        setStatus(e.target.value)
+        const statusData = (e.target.value).toLowerCase()
+        setStatus(statusData)
     }
 
 
@@ -71,7 +72,7 @@ const AllOrders = () => {
                                 <div >
                                     <select onChange={handleSelectValue} className="pending p-2 ">
                                         <option defaultValue={order.status}>{order.status}</option>
-                                        <option defaultValue="approved">approved</option>
+                                        <option defaultValue="approved">Approved</option>
                                         <option defaultValue="pending">Pending</option>
                                         <option defaultValue="cancelled">Cancelled</option>
                                     </select>
