@@ -42,7 +42,7 @@ const RemoveServices = () => {
                         <div className="card h-100 hover custom-cart">
                             <img src={service.img} className="img-fluid rounded-start w-100" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">{service.name}</h5>
+                                <h5 className="card-title">{service.place}</h5>
                                 <p className="card-text">{service.desc}</p>
                             </div>
                             <div className="card-footer  text-center">
