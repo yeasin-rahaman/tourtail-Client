@@ -45,6 +45,7 @@ const BlogDetails = () => {
 
 
     const onSubmit = data => {
+        data.place = selected.place
         data.blogId = id
         data.userName = user.displayName
         data.email = user.email
@@ -122,8 +123,8 @@ const BlogDetails = () => {
                                             <div className="d-flex justify-content-center text-center review-slider test">
                                                 <div className="w-50">
                                                     <h3 className="color-white">{review?.name}</h3>
+                                                    <h6>{review.place}</h6>
                                                     <br />
-
 
                                                     <Rating className="star"
                                                         initialRating={Number(review.rating)}
